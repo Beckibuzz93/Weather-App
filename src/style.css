@@ -1,0 +1,255 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, 
+body{
+    font-family: 'Tajawal', sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+    color: white;
+    height: 100%;
+    width: 100%;
+}
+
+#root {
+    background-image: url("./images/lake.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+.container-main {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    /*overflow: hidden;*/
+}
+
+/* SIDE PANEL */
+.side-panel {
+    width: 35%;
+    height: 100%;
+    background-color: #1B1C23;
+    opacity: 0.9;
+}
+.side-panel .sec.one {
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    border-bottom: 1px solid grey;
+}
+.side-panel .sec.one h1 {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 15px;
+    color: #c2c2c2;
+}
+.selection-box {
+    margin: auto;
+    background-color: transparent;
+    width: 100%;
+    height: 50px;
+    position: relative;
+    border-bottom: 1px solid grey;
+}
+.selection-box select {
+    appearance: none;
+    padding-left: 2rem;
+    font-family: inherit;
+    font-size: 1.2rem;
+    height: 49px;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    width: 100%;
+    background-color: transparent;
+    color: #c2c2c2;
+}
+.selection-box option {
+    background-color: #1B1C23;
+    color: #c2c2c2;
+    border: none;
+    outline: none;
+}
+.selection-box option:hover {
+    background-color: #000000;
+}
+.selection-box i {
+    font-size: 1.7rem;
+    color: #000000;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    color: #c2c2c2;
+}
+.more-cities {
+    padding-top: 2rem;
+}
+.more-cities p {
+    padding-top: 30px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1.2rem;
+    padding-left: 2rem;
+}
+.more-cities p:hover{
+    text-decoration: underline  #c2c2c2;
+}
+.selection-box.smaller {
+    display: none;
+    width: 100%;
+    border-bottom: none;
+}
+.selection-box.smaller select {
+    background-color: #1B1C23;
+    opacity: 0.9;
+}
+
+/* MAIN PAGE */
+.weather {
+    height: 100%;
+    width: 65%;
+    display: flex;
+}
+.town-and-date {
+    width: 100%;
+    height: 100%;
+    letter-spacing: 0.2rem;
+    display: flex;
+    align-items: flex-end;
+}
+.temperature {
+    margin: 1.4rem;
+}
+.temperature h1 {
+    font-size: 7rem;
+}
+.town-and-day {
+    margin: 2rem;
+}
+.town-and-day h3 {
+    font-size: 5rem;
+}
+
+.town-and-day p {
+    font-size: 2rem;
+    font-weight: 300;
+}
+.logo {
+    width: 100px;
+    height: 100px;
+    font-size: 3rem;
+    margin-left: 3rem;
+}
+.town-weatherlogo {
+    display: flex;
+}
+
+/***********LARGE SCREENS***********/
+@media only screen and (max-width: 1630px) {
+    .side-panel {
+        display: none;
+    }
+    .weather {
+        width: 100%;
+        flex-direction: column;
+    }
+    .selection-box.smaller {
+        display: block;
+        width: 80%;
+        margin-top: 10%;
+    }
+    .town-and-date {
+        justify-content: center;
+        height: 10%;
+    }
+    .town-and-date.data {
+        height: 50%;
+    }
+    .selection-box.smaller select {
+        font-size: 1rem;
+    }
+    .selection-box i {
+        font-size: 1.7rem;
+    }
+
+}
+@media only screen and (max-width: 1300px) {
+    .temperature h1 {
+        font-size: 5rem;
+    }
+    .town-and-day h3 {
+        font-size: 3rem;
+    }
+    .town-and-day p {
+        font-size: 1rem;
+    }
+    .temperature {
+        margin-bottom: 2rem;
+    }
+}
+@media only screen and (max-height: 900px) {
+    .more-cities {
+        padding-top: 3rem;
+    }
+    .more-cities p {
+        padding-top: 15px;
+    }
+}
+@media only screen and (max-height: 740px) {
+    .more-cities {
+        padding-top: 3rem;
+    }
+    .more-cities p {
+        padding-top: 5px;
+    }
+}
+/***********IPAD/TABLET SCREENS***********/
+@media only screen and (max-width: 870px) {
+    .temperature h1 {
+        font-size: 3rem;
+    }
+    .town-and-day h3 {
+        font-size: 2rem;
+    }
+    .town-and-day p {
+        font-size: 1rem;
+    }
+    .logo {
+        width: 80px;
+        height: 80px;
+        margin-left: 1rem;
+    }
+    .temperature {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+}
+/***********MOBILES SCREENS***********/
+@media only screen and (max-width: 630px) {
+    .town-and-date {
+        display: flex;
+        margin: auto;
+        flex-wrap: wrap;
+        margin-bottom: 40%;
+        width: 80%;
+    }
+    .temperature {
+        margin: 0rem;
+    }
+    .logo {
+        width: 50px;
+        height: 50px;
+        margin-left: 0.5rem;
+    }
+}
