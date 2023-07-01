@@ -6,11 +6,7 @@ This is a simple weather app. It uses a JSON file of places to loop through, the
 
 ## Clone this repo 
 ```bash 
-git clone 
-```
-## Navigate to the app folder
-```bash
-cd Beckibuzz93/
+git clone https://github.com/Beckibuzz93/Weather-App
 ```
 
 # Technologies used
